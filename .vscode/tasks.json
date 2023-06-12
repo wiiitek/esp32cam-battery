@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build",
+      "type": "shell",
+      "command": "arduino-cli compile --fqbn esp32:esp32:esp32cam .",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Upload",
+      "type": "shell",
+      "command": "arduino-cli upload --fqbn esp32:esp32:esp32cam --port /dev/ttyUSB0 .",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
